@@ -198,34 +198,28 @@ def _validate_search_input(input_data: Dict[str, Any]) -> tuple[bool, str]:
 # =============================================================================
 
 @tool("Job Search Tool")
-def search_jobs(input_json: str) -> str:
+def search_jobs(role: str, location: str, num_results: int) -> str:
     """
     Search for job listings using the Adzuna API.
 
     This tool is designed to be used by AI agents in the CrewAI framework.
-    It accepts a JSON string specifying the job search parameters and returns
-    formatted job listings that can be analyzed by other agents.
+    It accepts job search parameters and returns formatted job listings.
 
     Following best practices:
-    - CrewAI Tool Pattern: Clear input/output schema
+    - CrewAI Tool Pattern: Clear input/output schema with direct parameters
     - Anthropic: Structured prompts with XML tags for better parsing
     - Python: Robust error handling and type safety
 
-    Input JSON Schema:
-        {
-            "role": "<job_role>",           # e.g., "Data Scientist"
-            "location": "<location>",       # e.g., "Los Angeles"
-            "num_results": <number>         # e.g., 5 (max 50)
-        }
-
     Args:
-        input_json: JSON string with role, location, and num_results
+        role: Job title/role to search for (e.g., "Data Scientist")
+        location: Location to search in (e.g., "Los Angeles")
+        num_results: Number of job listings to return (1-50)
 
     Returns:
         Formatted string containing job listings or error message
 
     Example:
-        >>> result = search_jobs('{"role": "Data Scientist", "location": "Los Angeles", "num_results": 5}')
+        >>> result = search_jobs(role="Data Scientist", location="Los Angeles", num_results=5)
         >>> print(result)
         <job>
             <title>Senior Data Scientist</title>
@@ -234,24 +228,15 @@ def search_jobs(input_json: str) -> str:
     """
 
     # -------------------------------------------------------------------------
-    # Step 1: Parse and validate input
+    # Step 1: Validate input parameters
     # -------------------------------------------------------------------------
 
-    try:
-        input_data = json.loads(input_json)
-    except json.JSONDecodeError as e:
-        return f"""
-❌ ERROR: Invalid JSON input.
-
-Expected format:
-{{
-    "role": "<job_role>",
-    "location": "<location>",
-    "num_results": <number>
-}}
-
-JSON error: {str(e)}
-"""
+    # Build input data dict for validation
+    input_data = {
+        'role': role,
+        'location': location,
+        'num_results': num_results
+    }
 
     # Validate input parameters
     is_valid, error_message = _validate_search_input(input_data)
@@ -261,17 +246,11 @@ JSON error: {str(e)}
 
 {error_message}
 
-Expected format:
-{{
-    "role": "<job_role>",
-    "location": "<location>",
-    "num_results": <number>
-}}
+Please provide valid parameters:
+- role: Job title (non-empty string)
+- location: Search location (non-empty string)
+- num_results: Number of results (1-50)
 """
-
-    role = input_data['role']
-    location = input_data['location']
-    num_results = input_data['num_results']
 
     # -------------------------------------------------------------------------
     # Step 2: Check API credentials
