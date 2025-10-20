@@ -53,7 +53,7 @@ See [examples/example_output.txt](examples/example_output.txt) for a full sample
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/job-search-agent.git
+git clone https://github.com/byrencheema/job-search-agent.git
 cd job-search-agent
 
 # 2. Install dependencies with uv
@@ -439,8 +439,8 @@ MIT License - Feel free to use this for learning, projects, or your actual job s
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/your-username/job-search-agent/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/your-username/job-search-agent/discussions)
+- **Issues:** [GitHub Issues](https://github.com/byrencheema/job-search-agent/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/byrencheema/job-search-agent/discussions)
 - **Workshop Discord:** [Join here]
 - **Office Hours:** Fridays 2-4 PM at UCI
 
