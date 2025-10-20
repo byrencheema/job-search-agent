@@ -20,11 +20,9 @@ Best Practices Applied:
 - CrewAI: Delegation patterns for complex multi-step workflows
 """
 
-from crewai import Agent
-from langchain_anthropic import ChatAnthropic
+from crewai import Agent, LLM
 
 from src.config import (
-    ANTHROPIC_API_KEY,
     CLAUDE_MODEL,
     AGENT_VERBOSE,
     AGENT_ALLOW_DELEGATION,
@@ -38,12 +36,10 @@ from src.tools import search_jobs
 # =============================================================================
 
 # Initialize the Claude LLM that powers all our agents
-# Using Anthropic's ChatAnthropic via LangChain for CrewAI integration
-llm = ChatAnthropic(
+# Using CrewAI's LLM wrapper for simplified configuration
+llm = LLM(
     model=CLAUDE_MODEL,
-    anthropic_api_key=ANTHROPIC_API_KEY,
     temperature=0.7,  # Balanced creativity and consistency
-    max_tokens=4096,  # Sufficient for detailed responses
 )
 
 

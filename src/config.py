@@ -22,7 +22,7 @@ load_dotenv()
 
 # Anthropic Claude API Configuration
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-CLAUDE_MODEL = "claude-sonnet-4-5-20251022"  # Latest Claude model
+CLAUDE_MODEL = "anthropic/claude-3-5-sonnet-20241022"  # Stable, well-tested model
 
 # Adzuna Job Search API Configuration
 ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID")
@@ -128,8 +128,8 @@ def validate_config() -> tuple[bool, list[str]]:
         errors.append("DEFAULT_NUM_RESULTS must be between 1 and 50.")
 
     # Validate model name
-    if not CLAUDE_MODEL or not CLAUDE_MODEL.startswith("claude"):
-        errors.append("CLAUDE_MODEL must be a valid Claude model name.")
+    if not CLAUDE_MODEL or not CLAUDE_MODEL.startswith("anthropic/"):
+        errors.append("CLAUDE_MODEL must be a valid Claude model name with 'anthropic/' prefix.")
 
     is_valid = len(errors) == 0
     return is_valid, errors
