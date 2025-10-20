@@ -43,6 +43,7 @@ Thumbs.db
 
 # Outputs (generated reports - can be large)
 outputs/*.txt
+outputs/*.md
 !outputs/.gitkeep
 
 # Logs

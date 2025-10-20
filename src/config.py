@@ -63,7 +63,7 @@ OUTPUT_DIR = Path(__file__).parent.parent / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # Report filename format (includes timestamp)
-REPORT_FILENAME_FORMAT = "job_search_report_{timestamp}.txt"
+REPORT_FILENAME_FORMAT = "job_search_report_{timestamp}.md"
 
 # Console output settings
 SHOW_PROGRESS_MESSAGES = True
