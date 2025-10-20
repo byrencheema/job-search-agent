@@ -49,7 +49,7 @@ DEFAULT_NUM_RESULTS = 5  # Number of job listings to retrieve
 AGENT_VERBOSE = True
 
 # Agent delegation - Allow agents to delegate tasks to each other
-AGENT_ALLOW_DELEGATION = True
+AGENT_ALLOW_DELEGATION = False  # Disabled to reduce API calls and avoid rate limits
 
 # Memory settings - Agents can remember context from previous interactions
 AGENT_MEMORY = True
