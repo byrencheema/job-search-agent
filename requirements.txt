@@ -1,0 +1,25 @@
+# Job Search AI Agent System - Dependencies
+# Python 3.10+ required
+
+# CrewAI Framework - Multi-agent orchestration
+crewai==0.86.0
+crewai-tools==0.15.0
+
+# Anthropic Claude API - LLM provider
+langchain-anthropic==0.3.7
+anthropic==0.39.0
+
+# LangChain Core - LLM framework integration
+langchain==0.3.13
+langchain-core==0.3.28
+langchain-community==0.3.13
+
+# HTTP Requests - For Adzuna API calls
+requests==2.32.3
+
+# Environment Variables - Secure API key management
+python-dotenv==1.0.1
+
+# Additional Dependencies (installed automatically with above)
+# pydantic - Data validation
+# httpx - Async HTTP client (used by Anthropic SDK)
