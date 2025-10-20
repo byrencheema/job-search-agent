@@ -22,13 +22,13 @@ load_dotenv()
 
 # Anthropic Claude API Configuration
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-CLAUDE_MODEL = "anthropic/claude-3-5-sonnet-20241022"  # Stable, well-tested model
+CLAUDE_MODEL = "anthropic/claude-3-5-sonnet-20241022"
 
 # Adzuna Job Search API Configuration
 ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID")
 ADZUNA_API_KEY = os.getenv("ADZUNA_API_KEY")
 ADZUNA_BASE_URL = "https://api.adzuna.com/v1/api/jobs"
-ADZUNA_COUNTRY = "us"  # Country code for job search
+ADZUNA_COUNTRY = "us"
 
 # =============================================================================
 # JOB SEARCH PARAMETERS (TODO: CUSTOMIZE THESE FOR YOUR JOB SEARCH!)

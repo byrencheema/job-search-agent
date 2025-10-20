@@ -44,11 +44,6 @@ JOB_ROLE = DEFAULT_JOB_ROLE  # e.g., "Software Engineer", "Product Manager"
 LOCATION = DEFAULT_LOCATION  # e.g., "San Francisco", "Remote", "New York"
 NUM_RESULTS = DEFAULT_NUM_RESULTS  # Number of jobs to search for (1-50)
 
-# Example customizations:
-# JOB_ROLE = "Machine Learning Engineer"
-# LOCATION = "San Francisco"
-# NUM_RESULTS = 10
-
 
 # =============================================================================
 # HELPER FUNCTIONS
