@@ -2,24 +2,11 @@
 # Python 3.10+ required
 
 # CrewAI Framework - Multi-agent orchestration
+# Provides the LLM layer (via LiteLLM) used to reach the Claude API
 crewai==0.203.1
-crewai-tools==0.76.0
-
-# Anthropic Claude API - LLM provider
-langchain-anthropic==1.0.0
-anthropic==0.71.0
-
-# LangChain Core - LLM framework integration
-langchain==1.0.1
-langchain-core==1.0.0
-langchain-community==0.4
 
 # HTTP Requests - For Adzuna API calls
 requests==2.32.5
 
 # Environment Variables - Secure API key management
 python-dotenv==1.1.1
-
-# Additional Dependencies (installed automatically with above)
-# pydantic - Data validation
-# httpx - Async HTTP client (used by Anthropic SDK)
