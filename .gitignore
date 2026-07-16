@@ -62,7 +62,6 @@ htmlcov/
 .mypy_cache/
 
 # UV package manager
-uv.lock
 .python-version
 
 # Ruff
