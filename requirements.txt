@@ -2,23 +2,23 @@
 # Python 3.10+ required
 
 # CrewAI Framework - Multi-agent orchestration
-crewai==0.86.0
-crewai-tools==0.15.0
+crewai==0.203.1
+crewai-tools==0.76.0
 
 # Anthropic Claude API - LLM provider
-langchain-anthropic==0.3.7
-anthropic==0.39.0
+langchain-anthropic==1.0.0
+anthropic==0.71.0
 
 # LangChain Core - LLM framework integration
-langchain==0.3.13
-langchain-core==0.3.28
-langchain-community==0.3.13
+langchain==1.0.1
+langchain-core==1.0.0
+langchain-community==0.4
 
 # HTTP Requests - For Adzuna API calls
-requests==2.32.3
+requests==2.32.5
 
 # Environment Variables - Secure API key management
-python-dotenv==1.0.1
+python-dotenv==1.1.1
 
 # Additional Dependencies (installed automatically with above)
 # pydantic - Data validation
