@@ -48,3 +48,4 @@ target-version = "py310"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
+markers = ["integration: tests that call live APIs"]
