@@ -22,7 +22,7 @@ load_dotenv()
 
 # Anthropic Claude API Configuration
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-CLAUDE_MODEL = "anthropic/claude-3-5-sonnet-20241022"
+CLAUDE_MODEL = "anthropic/claude-sonnet-5"
 
 # Adzuna Job Search API Configuration
 ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID")
